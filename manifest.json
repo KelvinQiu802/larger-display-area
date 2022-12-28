@@ -1,11 +1,11 @@
 {
-	"id": "obsidian-sample-plugin",
-	"name": "Sample Plugin",
+	"id": "larger-display-area",
+	"name": "Larger Display Area",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "This is a sample plugin for Obsidian. This plugin demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "A simple plugin that helps you set a larger display area for content.",
+	"author": "Kelvin Qiu",
+	"authorUrl": "https://github.com/KelvinQiu802",
+	"fundingUrl": "https://github.com/KelvinQiu802",
 	"isDesktopOnly": false
 }
