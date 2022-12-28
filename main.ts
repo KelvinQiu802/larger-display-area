@@ -97,6 +97,10 @@ class SampleSettingTab extends PluginSettingTab {
 						changeWidth(value);
 					})
 			);
+		containerEl.createEl("i", {
+			text: "Make sure Settings -> Editor -> Readable line length is ACTIVE",
+		});
+		containerEl.createEl("br", {});
 		containerEl.createEl("a", {
 			href: "https://github.com/KelvinQiu802/larger-display-area",
 			text: "Star this project on Github!",

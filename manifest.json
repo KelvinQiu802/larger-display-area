@@ -1,7 +1,7 @@
 {
 	"id": "larger-display-area",
 	"name": "Larger Display Area",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "0.15.0",
 	"description": "A simple plugin that helps you set a larger display area for content.",
 	"author": "Kelvin Qiu",
