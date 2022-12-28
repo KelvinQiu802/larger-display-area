@@ -2,12 +2,12 @@ import { App, Plugin, PluginSettingTab, Setting } from "obsidian";
 
 import isNumber from "is-number";
 
-interface MyPluginSettings {
-	mySetting: string;
+interface WidthSetting {
+	width: string;
 }
 
-const DEFAULT_SETTINGS: MyPluginSettings = {
-	mySetting: "default",
+const DEFAULT_SETTINGS: WidthSetting = {
+	width: "default",
 };
 
 function changeWidth(value: string): void {
@@ -21,12 +21,12 @@ function changeWidth(value: string): void {
 }
 
 export default class MyPlugin extends Plugin {
-	settings: MyPluginSettings;
+	settings: WidthSetting;
 
 	async onload() {
 		await this.loadSettings();
 
-		changeWidth(this.settings.mySetting);
+		changeWidth(this.settings.width);
 
 		// This adds a settings tab so the user can configure various aspects of the plugin
 		this.addSettingTab(new SampleSettingTab(this.app, this));
@@ -44,7 +44,7 @@ export default class MyPlugin extends Plugin {
 	}
 
 	onunload() {
-		changeWidth("700");
+		changeWidth("700"); // back to default value
 	}
 
 	async loadSettings() {
@@ -82,9 +82,9 @@ class SampleSettingTab extends PluginSettingTab {
 			.addText((text) =>
 				text
 					.setPlaceholder("1000")
-					.setValue(this.plugin.settings.mySetting)
+					.setValue(this.plugin.settings.width)
 					.onChange(async (value) => {
-						this.plugin.settings.mySetting = value;
+						this.plugin.settings.width = value;
 						await this.plugin.saveSettings();
 
 						// Validation
